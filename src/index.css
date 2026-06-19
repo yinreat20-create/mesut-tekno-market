@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: #070605;
+  color: #f5f3ef;
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: rgba(201, 162, 77, 0.3);
+  color: #fff;
+}
+
+@layer components {
+  .lux-container {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-12;
+  }
+
+  .gold-text {
+    background: linear-gradient(100deg, #e0c06b 0%, #c9a24d 40%, #fbf6ea 55%, #a8851f 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .gold-border {
+    border: 1px solid rgba(201, 162, 77, 0.35);
+  }
+
+  .card-luxury {
+    @apply relative overflow-hidden rounded-2xl bg-noir-850 gold-border transition-all duration-500;
+  }
+
+  .card-luxury::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top, rgba(201, 162, 77, 0.08), transparent 60%);
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    pointer-events: none;
+  }
+
+  .card-luxury:hover {
+    transform: translateY(-6px);
+    border-color: rgba(201, 162, 77, 0.7);
+    box-shadow: 0 24px 60px -20px rgba(0, 0, 0, 0.9), 0 0 0 1px rgba(201, 162, 77, 0.3);
+  }
+
+  .card-luxury:hover::before {
+    opacity: 1;
+  }
+
+  .btn-gold {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.95rem 2rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    border-radius: 0.75rem;
+    color: #1a1503;
+    background: linear-gradient(120deg, #f5ebcb 0%, #e0c06b 25%, #c9a24d 50%, #a8851f 80%, #d4ab4f 100%);
+    background-size: 200% auto;
+    transition: all 0.5s ease;
+    overflow: hidden;
+  }
+
+  .btn-gold:hover {
+    background-position: right center;
+    box-shadow: 0 0 35px -4px rgba(201, 162, 77, 0.6);
+    transform: translateY(-2px);
+  }
+
+  .btn-outline-gold {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl border border-gold-500/50 px-7 py-3.5 text-sm font-semibold uppercase tracking-wider text-gold-200 transition-all duration-500;
+  }
+
+  .btn-outline-gold:hover {
+    border-color: gold-500;
+    background: rgba(201, 162, 77, 0.1);
+    box-shadow: 0 0 25px -6px rgba(201, 162, 77, 0.5);
+  }
+}
+
+@layer utilities {
+  .reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1), transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .text-shadow-gold {
+    text-shadow: 0 0 24px rgba(201, 162, 77, 0.4);
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0c0b09;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #c9a24d, #a8851f);
+  border-radius: 10px;
+}
