@@ -3,13 +3,12 @@ import { getAuth } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
 
 export const firebaseConfig = {
-apiKey : "AIzaSyC_Y6kRF8CZdKJwihkEaSwy1nHBFJb7OUo" , 
-  authDomain : "mesut-tekno-market.firebaseapp.com" , 
-  projectId : "mesut-tekno-market" , 
-  storageBucket : "mesut-tekno-market.firebasestorage.app" , 
-  messagingSenderId : "242014287881" , 
-  appId : "1:242014287881:web:6200ff1d6497d2e36b60d8" , 
-  ölçümId : "G-G8K16D1ZCQ" 
+ apiKey: "AIzaSyDBwiM_edZ6TY5bgnMZB0D-LM_7lretWvo",
+            authDomain: "teknomarket-1.firebaseapp.com",
+            projectId: "teknomarket-1",
+            storageBucket: "teknomarket-1.firebasestorage.app",
+            messagingSenderId: "391354789892",
+            appId: "1:391354789892:web:d82f37e93da39d121b0551"
 };
 
 const app = getApps().length ? getApp() : initializeApp(firebaseConfig);
