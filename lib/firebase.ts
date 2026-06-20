@@ -3,13 +3,13 @@ import { getAuth } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
 
 export const firebaseConfig = {
-  apiKey: 'AIzaSyDCxXNBny3VIP5QRKQ2HOGYgyJqJFksDSs',
-  authDomain: 'satispro-13ba1.firebaseapp.com',
-  projectId: 'satispro-13ba1',
-  storageBucket: 'satispro-13ba1.firebasestorage.app',
-  messagingSenderId: '435152468711',
-  appId: '1:435152468711:web:145900d3590791a780c042',
-  measurementId: 'G-RJ824DP8KJ',
+apiKey : "AIzaSyC_Y6kRF8CZdKJwihkEaSwy1nHBFJb7OUo" , 
+  authDomain : "mesut-tekno-market.firebaseapp.com" , 
+  projectId : "mesut-tekno-market" , 
+  storageBucket : "mesut-tekno-market.firebasestorage.app" , 
+  messagingSenderId : "242014287881" , 
+  appId : "1:242014287881:web:6200ff1d6497d2e36b60d8" , 
+  ölçümId : "G-G8K16D1ZCQ" 
 };
 
 const app = getApps().length ? getApp() : initializeApp(firebaseConfig);
